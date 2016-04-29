@@ -134,71 +134,6 @@
         
             <div class="column one-third">
                 
-    <h3>Popular Repositories</h3>
-    <div class="popular-container"></div>
-    
-    <script type="text/template" id="popular-list-template">
-        <section class="repo-card">
-            <a href="{%=clone_url%}" target="_blank">
-                <div class="repo-card-image geopattern" data-pattern-id="{%=name%}">
-                    <h3 class="repo-card-title">{%=name%}</h3>
-                </div>
-                <div class="repo-card-body-wrapper">
-                    <div class="repo-card-body">
-                        <p class="repo-card-description">{%=description%}</p>
-                        <div class="repo-card-meta">
-                            <span class="meta-info tooltipped tooltipped-n {%=language%}" aria-label="{%=language%} Project">{%=language%}</span>
-                            <span class="meta-info tooltipped tooltipped-n" aria-label="{%=stargazers_count%} stars">
-                                <span class="octicon octicon-star"></span> {%=stargazers_count%}</span>
-                            <span class="meta-info tooltipped tooltipped-n" aria-label="{%=forks_count%}">
-                                <span class="octicon octicon-git-branch"></span> {%=forks_count%}
-                            </span>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </section>
-    </script>
-
-    <script src="/js/baiduTemplate.js"></script>
-    <script type="text/javascript">
-        var popular_repos = function(){
-
-            var baiduTpl = new Object();
-
-            var handleTpl = function(){
-                baiduTpl.popular_list = baidu.template("popular-list-template");
-            };
-
-            var handleGithub = function(){
-                var popularContainer = $(".popular-container");
-
-                var repos = "cordova-plugin-alipay,hexo-theme-primer".split(",");
-                for(var i in repos){
-                    var name = repos[i];
-                    $.get("https://api.github.com/repos/challengeof/"+name,handle);
-                }
-                function handle(result){
-                    if(result){
-                        var html = baiduTpl.popular_list(result);
-                        popularContainer.append(html);
-                        $(".geopattern").each(function(){           
-                            $(this).geopattern($(this).data('pattern-id'));
-                        });
-                    }
-                }
-            };
-
-            return {
-                init:function(){
-                    handleTpl();
-                    handleGithub();
-                }
-            }
-        }; 
-        $(popular_repos().init);
-    </script>
-
 
 
 
@@ -223,7 +158,7 @@
             </li>
         </ul>
 
-        <a href="https://github.com/yumemor/yumemor.github.io" target="_blank" aria-label="view source code">
+        <a href="undefined" target="_blank" aria-label="view source code">
             <span class="mega-octicon octicon-mark-github" title="GitHub"></span>
         </a>
 
@@ -268,7 +203,7 @@
 
 		<script src="/js/index.js"></script>
 
-		 <script src="/js/popular_repo.js"></script> 
+		
 
 	</body>
 </html>
