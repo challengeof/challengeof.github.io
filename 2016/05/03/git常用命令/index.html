@@ -86,7 +86,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/03/git常用命令/index.html">
 <meta property="og:site_name" content="石頭剪刀b">
 <meta property="og:description" content="创建本地仓库 git init --bare shared.git（或者直接git init）">
-<meta property="og:updated_time" content="2016-05-03T09:03:42.000Z">
+<meta property="og:updated_time" content="2016-05-03T09:07:35.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用命令">
 <meta name="twitter:description" content="创建本地仓库 git init --bare shared.git（或者直接git init）">
@@ -318,7 +318,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-03T17:03:42+08:00" content="2016-05-03">
+            <time itemprop="dateCreated" datetime="2016-05-03T17:07:35+08:00" content="2016-05-03">
               2016-05-03
             </time>
           </span>
@@ -453,18 +453,7 @@ git push origin :refs/tags/v1.0</code>删除已经推送到远程的标签，注
   &#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit&quot;</code></li>
 <li>最近一次提交<br>  <code>git config --global alias.last &#39;log -1&#39;</code>//等价 git log -1</li>
 <li>配置文件<br>  配置Git的时候，加上–global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。<br>  配置文件放哪了？每个仓库的Git配置文件都放在.git/config文件中<br>  cat .git/config</li>
-<li><p>难点篇<br>  当你接到一个修复一个bug的任务时,创建一个分支issue-101<br>  来修复它，但是当前正在dev<br>  上进行的工作只进行到一半,还没法提交，但是此时 必须在两个小时内修复该bug，怎么办？<br>  Git还提供了一个stash<br>  功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作</p>
-<pre><code>使用`git stash`就可以将你当前未提交到本地（和服务器）的代码推入到Git的栈中，这时候你的工作区间和上一次提交的内容是完全一样的，
-</code></pre><p>  所以你可以放心的修 Bug，等到修完Bug，提交到服务器上后，再使用<code>git stash apply</code>将以前一半的工作 应用回来。</p>
-<pre><code>也许有的人会说，那我可不可以多次将未提交的代码压入到栈中？答案是可以的。当你多次使用&apos;git stash&apos;命令后，你的栈里将充满了未提交的代码
-</code></pre><p>  ，这时候你会对将哪个版本应用回来有些困惑，<code>git stash list</code>命令可以将当前的Git栈信息打印出来，你只需要将找到对应的版本号，</p>
-<pre><code>例如使用`git stash apply stash@{1}`就可以将你指定版本号为stash@{1}的工作取出来，当你将所有的栈都应用回来的时候，
-</code></pre><p>  可以使用<code>git stash clear</code>来将栈清空。在这里顺便提下<code>git format-patch -n</code>, n是具体某个数字。</p>
-<pre><code>例如 `git format-patch -1` 这时便会根据log生成一个对应的补丁，如果 &apos;git format-patch -2&apos; 那么便会生成2个补丁，当然前提是你的
-</code></pre><p>  log上有至少有两个记录。</p>
-<pre><code>看过上面的信息，就可以知道使用场合了：当前工作区内容已被修改，但是并未完成。这时Boss来了，说前面的分支上面有一个Bug，需要立即修复。
-</code></pre><p>  可是我又不想提交目前的修改，因为修改没有完成。但是，不提交的话，又没有办法checkout到前面的分支。此时用Git Stash就相当于备份工作区了。<br>  然后在Checkout过去修改，就能够达到保存当前工作区，并及时恢复的作用。</p>
-</li>
+<li>难点篇<br>  当你接到一个修复一个bug的任务时,创建一个分支issue-101来修复它，但是当前正在dev上进行的工作只进行到一半,还没法提交，<br>但是此时 必须在两个小时内修复该bug，怎么办？<br>Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作。<br>  使用<code>git stash</code>就可以将你当前未提交到本地（和服务器）的代码推入到Git的栈中，这时候你的工作区间和上一次提交的内容是完全一样的，<br>所以你可以放心的修 Bug，等到修完Bug，提交到服务器上后，再使用<code>git stash apply</code>将以前一半的工作 应用回来。<br>也许有的人会说，那我可不可以多次将未提交的代码压入到栈中？答案是可以的。当你多次使用’git stash’命令后，你的栈里将充满了未提交的代码，<br>这时候你会对将哪个版本应用回来有些困惑，<code>git stash list</code>命令可以将当前的Git栈信息打印出来，你只需要将找到对应的版本号，<br>  例如使用<code>git stash apply stash@{1}</code>就可以将你指定版本号为stash@{1}的工作取出来，当你将所有的栈都应用回来的时候，<br>可以使用<code>git stash clear</code>来将栈清空。在这里顺便提下<code>git format-patch -n</code>, n是具体某个数字。<br>  例如 <code>git format-patch -1</code> 这时便会根据log生成一个对应的补丁，如果 ‘git format-patch -2’ 那么便会生成2个补丁，当然前提是你的<br>log上有至少有两个记录。<br>  看过上面的信息，就可以知道使用场合了：当前工作区内容已被修改，但是并未完成。这时Boss来了，说前面的分支上面有一个Bug，需要立即修复。<br>可是我又不想提交目前的修改，因为修改没有完成。但是，不提交的话，又没有办法checkout到前面的分支。此时用Git Stash就相当于备份工作区了。<br>然后在Checkout过去修改，就能够达到保存当前工作区，并及时恢复的作用。</li>
 </ul>
 
       
