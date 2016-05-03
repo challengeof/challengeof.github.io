@@ -308,6 +308,150 @@
             
               
                 
+                <a class="post-title-link" href="/2016/05/03/java读取配置文件/" itemprop="url">
+                  刚工作时写的代码片段-java
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">发表于</span>
+            <time itemprop="dateCreated" datetime="2016-05-03T17:16:49+08:00" content="2016-05-03">
+              2016-05-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/03/java读取配置文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/03/java读取配置文件/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h4 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h4><ul>
+<li><p>这是刚刚工作时写的一段读取配置文件的代码，回忆满满。<br>```java<br>package com.properties.util<br>import java.io.IOException;<br>import java.io.InputStream;<br>import java.util.Properties;<br>import org.apache.log4j.Logger;<br>public class Config {<br>private static Logger logger = Logger.getLogger(Config.class);</p>
+<p>public static Properties getProp(String filename){</p>
+<pre><code>Properties prop = new Properties();
+InputStream inStream = Config.class.getClassLoader().getResourceAsStream(filename);
+try {
+  prop.load(inStream);
+} catch (IOException e) {
+  logger.error(&quot;读取Properties文件失败...&quot;,e);
+}finally{
+  try {
+      inStream.close();
+  } catch (IOException e) {
+      e.printStackTrace();
+  }
+  inStream = null;
+}
+return prop;
+</code></pre><p>}</p>
+<p>public static void main(String[] args) {</p>
+<pre><code>Properties prop = Config.getProp(&quot;dbconfig.properties&quot;);
+System.out.println(prop.getProperty(&quot;jdbc.user&quot;));
+</code></pre><p>}<br>}</p>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/05/03/git常用命令/" itemprop="url">
                   git常用命令
                 </a>
@@ -574,7 +718,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">2</span>
+              <span class="site-state-item-count">3</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
@@ -582,7 +726,7 @@
           
             <div class="site-state-item site-state-categories">
               <a href="/categories">
-                <span class="site-state-item-count">3</span>
+                <span class="site-state-item-count">4</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -591,7 +735,7 @@
           
             <div class="site-state-item site-state-tags">
               <a href="/tags">
-                <span class="site-state-item-count">4</span>
+                <span class="site-state-item-count">5</span>
                 <span class="site-state-item-name">标签</span>
               </a>
             </div>
