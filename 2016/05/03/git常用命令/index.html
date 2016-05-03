@@ -86,7 +86,7 @@
 <meta property="og:url" content="http://yoursite.com/2016/05/03/git常用命令/index.html">
 <meta property="og:site_name" content="石頭剪刀b">
 <meta property="og:description" content="创建本地仓库 git init --bare shared.git（或者直接git init）">
-<meta property="og:updated_time" content="2016-05-03T09:03:01.000Z">
+<meta property="og:updated_time" content="2016-05-03T09:03:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用命令">
 <meta name="twitter:description" content="创建本地仓库 git init --bare shared.git（或者直接git init）">
@@ -318,7 +318,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-03T17:03:01+08:00" content="2016-05-03">
+            <time itemprop="dateCreated" datetime="2016-05-03T17:03:42+08:00" content="2016-05-03">
               2016-05-03
             </time>
           </span>
@@ -444,7 +444,7 @@ git push origin :refs/tags/v1.0</code>删除已经推送到远程的标签，注
 <li>github 上面 的 pull request用于你fork了别人的项目，然后修改fork后的代码，想提交到 别人的项目里面，就需要点击 pull request。</li>
 <li>研究发现，如APPdemo文件夹下，<code>git init</code> 初始化本地仓库<br><code>git add ,git commit</code>,都是在当前文件夹下面进行的<br>只有<code>git push</code>推送到远程仓库(或者本机其他目录下的仓库中[也算远程仓库，只不过是离线的远程仓库])。前提是需要关联本地仓库与远程仓库<br><code>git clone</code> 命令的时候，默认会做一次关联，如果没有关联的话，需要我们手动关联。</li>
 <li>但是不管远程仓库(net) 远程仓库(本机)，本地仓库(某一个文件夹)本质上都是仓库。</li>
-<li>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成，master分支是主分支，因此要时刻与远程同步；<br>dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；bug分支只用于在本地修复bug，就没必要推到远程了，<br>除非老板要看看你每周到底修复了几个bug；feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。<br>标签是为了打上版本号信息，当然不能乱叫，通常用：v1.0, v1.1, v2.0 …或者按发布日期：build-20160503, build-20160504 …<br>如果你想修复bootstrap的一个bug，或者新增一个功能，立刻就可以开始干活，干完后，往自己的仓库推送。<br>如果你希望bootstrap的官方库能接受你的修改，你就可以在GitHub上发起一个pull request。当然，对方是否接受你的pull request就不一定了。<br>有些时候，你必须把某些文件放到Git工作目录中，但又不能提交它们，比如保存了数据库密码的配置文件啦，等等，每次git status<br>都会显示Untracked files …，有强迫症的童鞋心里肯定不爽。好在Git考虑到了大家的感受，这个问题解决起来也很简单，<br>在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。不需要从头写.gitignore<br>文件，GitHub已经为我们准备了各种配置文件，只需要组合一下就可以使用了。所有配置文件可以直接在线浏览：<a href="https://github.com/github/gitignore" target="_blank" rel="external">https://github.com/github/gitignore</a><br>如忽略<br>Python编译产生的.pyc<br>、.pyo<br>、dist<br>等文件或目录：<br>//  「#」 是注释  <em>通配符<br>「#」 Python:
+<li>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成，master分支是主分支，因此要时刻与远程同步；<br>dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；bug分支只用于在本地修复bug，就没必要推到远程了，<br>除非老板要看看你每周到底修复了几个bug；feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。<br>  标签是为了打上版本号信息，当然不能乱叫，通常用：v1.0, v1.1, v2.0 …或者按发布日期：build-20160503, build-20160504 …<br>  如果你想修复bootstrap的一个bug，或者新增一个功能，立刻就可以开始干活，干完后，往自己的仓库推送。<br>如果你希望bootstrap的官方库能接受你的修改，你就可以在GitHub上发起一个pull request。当然，对方是否接受你的pull request就不一定了。<br>  有些时候，你必须把某些文件放到Git工作目录中，但又不能提交它们，比如保存了数据库密码的配置文件啦，等等，每次git status<br>都会显示Untracked files …，有强迫症的童鞋心里肯定不爽。好在Git考虑到了大家的感受，这个问题解决起来也很简单，<br>  在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。不需要从头写.gitignore<br>文件，GitHub已经为我们准备了各种配置文件，只需要组合一下就可以使用了。所有配置文件可以直接在线浏览：<a href="https://github.com/github/gitignore" target="_blank" rel="external">https://github.com/github/gitignore</a><br>如忽略<br>Python编译产生的.pyc<br>、.pyo<br>、dist<br>等文件或目录：<br>//  「#」 是注释  <em>通配符<br>「#」 Python:
 </em>.py[cod]<br><em>.so
 </em>.egg<br>git 工作区 和暂存区 各个分支用的是同一个，仅仅提交的时候由于指针指的地方不同，令我们感觉似乎在不同区间上面工作，<br>且git限定我们 工作区间被修改(如 index.jsp 被修改或被git add但是未 commit) 此时 git是不允许git checkout （切换分支的）<br>注意关联远程仓库和关联远程分支<br><strong>关联远程仓库</strong><br><code>git remote add origin git@github.com:challengeof、challengeof.github.io.git</code><br><strong>关联远程分支</strong><br><code>git branch --set-upstream dev origin/dev</code></li>
 </ul>
