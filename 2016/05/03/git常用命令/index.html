@@ -80,16 +80,16 @@
 
 
 
-<meta name="description" content="创建本地仓库  git init --bare shared.git（或者直接git init）">
+<meta name="description" content="创建本地仓库 git init --bare shared.git（或者直接git init）">
 <meta property="og:type" content="article">
 <meta property="og:title" content="git常用命令">
 <meta property="og:url" content="http://yoursite.com/2016/05/03/git常用命令/index.html">
 <meta property="og:site_name" content="石頭剪刀b">
-<meta property="og:description" content="创建本地仓库  git init --bare shared.git（或者直接git init）">
-<meta property="og:updated_time" content="2016-05-03T07:51:24.000Z">
+<meta property="og:description" content="创建本地仓库 git init --bare shared.git（或者直接git init）">
+<meta property="og:updated_time" content="2016-05-03T08:10:53.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="git常用命令">
-<meta name="twitter:description" content="创建本地仓库  git init --bare shared.git（或者直接git init）">
+<meta name="twitter:description" content="创建本地仓库 git init --bare shared.git（或者直接git init）">
 
 
 
@@ -318,7 +318,7 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-03T15:51:24+08:00" content="2016-05-03">
+            <time itemprop="dateCreated" datetime="2016-05-03T16:10:53+08:00" content="2016-05-03">
               2016-05-03
             </time>
           </span>
@@ -377,11 +377,43 @@
       
 
       
-        <ul>
-<li>创建本地仓库<br>  <code>git init --bare shared.git</code>（或者直接<code>git init</code>）  <a id="more"></a></li>
-<li>配置个人信息<br>  <code>git config user.name &quot;yourName&quot;</code><br>  <code>git config user.email &quot;your@gmail.com&quot;</code><br>  或者<br>  <code>git config --global user.name &quot;yourName&quot;</code><br>  <code>git config --global user.email &quot;your@gmail.com&quot;</code></li>
-<li>复制仓库到本地<br>  <code>git clone /f/software/repository/git/shared.git/ .</code>(注意点代表当前目录)<br>  或者<br>  <code>git clone git@github.com:challengeof/challengeof.github.io.git</code><br>  或者<br>  <code>git clone https://github.com/challengeof/challengeof.github.io.git</code></li>
+        <ol>
+<li>创建本地仓库<br> <code>git init --bare shared.git</code>（或者直接<code>git init</code>） <a id="more"></a></li>
+<li>配置个人信息<br> <code>git config user.name &quot;yourName&quot;</code><br> <code>git config user.email &quot;your@gmail.com&quot;</code><br> 或者<br> <code>git config --global user.name &quot;yourName&quot;</code><br> <code>git config --global user.email &quot;your@gmail.com&quot;</code></li>
+<li>复制仓库到本地<br> <code>git clone /f/software/repository/git/shared.git/ .</code>(注意点代表当前目录)<br> 或者<br> <code>git clone git@github.com:challengeof/challengeof.github.io.git</code><br> 或者<br> <code>git clone https://github.com/challengeof/challengeof.github.io.git</code></li>
+<li>未提交<br> <code>git diff readme.txt （diff --&gt; difference）</code><ul>
+<li>【使用时机，修改readme.txt，但还没有准备提交(还未add commit)，想看看此次修改和上次提交的区别】</li>
 </ul>
+</li>
+<li>提交后<br> <code>git diff HEAD -- readme.txt</code><ul>
+<li>命令可以查看工作区和版本库里面最新版本的区别</li>
+</ul>
+</li>
+<li>查看历史<br> <code>git log</code><ul>
+<li>可以查看提交历史，以便确定要回退到哪个版本</li>
+</ul>
+</li>
+<li>重返未来<br> <code>git reflog</code><ul>
+<li>查看命令历史，以便确定要回到未来的哪个版本</li>
+</ul>
+</li>
+<li>撤销操作<br> <code>git checkout -f</code><ul>
+<li>撤销全部<br><code>git checkout -- readme.txt</code></li>
+<li>撤销readme.txt文件，–很重要，不然就切换到另一个分支了，<br>一种是readme.txt自修改后还没有被放到暂存区，<br>现在，撤销修改就回到和版本库一模一样的状态；<br>(还不如再次git pull一次或者 直接vim readme.txt)【改变的是工作区内容】<br>一种是readme.txt已经添加到暂存区后，又在工作区作了修改xx ，现在，撤销修改就回到 刚刚git add到暂存区时的状态，暂存区还在。</li>
+</ul>
+</li>
+<li>创建分支<br> <code>git checkout -b dev</code><ul>
+<li>创建dev分支并切换到该分支。相当于执行了:<br><code>git branch dev</code><br><code>git checkout dev</code></li>
+</ul>
+</li>
+<li>合并和删除分支<br><code>git merge dev</code><ul>
+<li>假设当前分支是master，merge dev,把dev分支合并到当前分支（默认是Fast-forward快进模式 也就是直接把master<pre><code>指向dev的当前提交，所以合并速度非常快。）
+</code></pre><code>git branch -d dev</code></li>
+<li>删除dev分支，-D 为强制删除。</li>
+</ul>
+</li>
+<li></li>
+</ol>
 
       
     </div>
@@ -508,7 +540,7 @@
         <nav class="site-state motion-element">
           <div class="site-state-item site-state-posts">
             <a href="/archives">
-              <span class="site-state-item-count">3</span>
+              <span class="site-state-item-count">2</span>
               <span class="site-state-item-name">日志</span>
             </a>
           </div>
