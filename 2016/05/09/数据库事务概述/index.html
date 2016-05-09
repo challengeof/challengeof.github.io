@@ -6,16 +6,22 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>数据库事务概述 | 石頭剪刀b</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="数据库事务概述事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID 原子性，隔离性，一致性和持久性，缺一不可）。">
+  <meta name="description" content="事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID 原子性，隔离性，一致性和持久性，缺一不可）。
+原子性(Atomictity) ：即事务是不可分割的最小工作单元，事务内的操作要么全做，要么全不做。
+一致性(Consistency) ：在事务执行前数据库的数据处于正确的状态，而事务执行完成后数据库的数据还是处">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库事务概述">
 <meta property="og:url" content="http://yoursite.com/2016/05/09/数据库事务概述/index.html">
 <meta property="og:site_name" content="石頭剪刀b">
-<meta property="og:description" content="数据库事务概述事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID 原子性，隔离性，一致性和持久性，缺一不可）。">
-<meta property="og:updated_time" content="2016-05-09T07:49:31.000Z">
+<meta property="og:description" content="事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID 原子性，隔离性，一致性和持久性，缺一不可）。
+原子性(Atomictity) ：即事务是不可分割的最小工作单元，事务内的操作要么全做，要么全不做。
+一致性(Consistency) ：在事务执行前数据库的数据处于正确的状态，而事务执行完成后数据库的数据还是处">
+<meta property="og:updated_time" content="2016-05-09T08:52:37.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库事务概述">
-<meta name="twitter:description" content="数据库事务概述事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID 原子性，隔离性，一致性和持久性，缺一不可）。">
+<meta name="twitter:description" content="事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID 原子性，隔离性，一致性和持久性，缺一不可）。
+原子性(Atomictity) ：即事务是不可分割的最小工作单元，事务内的操作要么全做，要么全不做。
+一致性(Consistency) ：在事务执行前数据库的数据处于正确的状态，而事务执行完成后数据库的数据还是处">
   
     <link rel="alternative" href="/atom.xml" title="石頭剪刀b" type="application/atom+xml">
   
@@ -191,7 +197,7 @@
   
     <div class="article-meta">
       <a href="/2016/05/09/数据库事务概述/" class="article-date">
-  	<time datetime="2016-05-09T07:49:31.000Z" itemprop="datePublished">2016-05-09</time>
+  	<time datetime="2016-05-09T08:52:37.000Z" itemprop="datePublished">2016-05-09</time>
 </a>
     </div>
   
@@ -228,8 +234,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="数据库事务概述"><a href="#数据库事务概述" class="headerlink" title="数据库事务概述"></a>数据库事务概述</h2><h6 id="事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID-原子性，隔离性，一致性和持久性，缺一不可）。"><a href="#事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID-原子性，隔离性，一致性和持久性，缺一不可）。" class="headerlink" title="事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID 原子性，隔离性，一致性和持久性，缺一不可）。"></a>事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID <em>原子性，隔离性，一致性和持久性</em>，缺一不可）。</h6><a id="more"></a>
-<ul>
+        <h6 id="事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID-原子性，隔离性，一致性和持久性，缺一不可）。"><a href="#事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID-原子性，隔离性，一致性和持久性，缺一不可）。" class="headerlink" title="事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID 原子性，隔离性，一致性和持久性，缺一不可）。"></a>事务首先是一系列操作组成的工作单元，该工作单元内的操作是不可分割的，即要么所有操作都做，要么所有操作都不做，这就是事务（事务必选满足ACID <em>原子性，隔离性，一致性和持久性</em>，缺一不可）。</h6><ul>
 <li><strong>原子性(Atomictity)</strong> ：即事务是不可分割的最小工作单元，事务内的操作要么全做，要么全不做。</li>
 <li><strong>一致性(Consistency)</strong> ：在事务执行前数据库的数据处于正确的状态，而事务执行完成后数据库的数据还是处于正确的状态，即数据完成性约束没有被破坏；如银行转账。</li>
 <li><strong>隔离性(Isolation)</strong> ：并发事务执行之间无影响，在一个事务内部的操作对其他事务是不产生影响的，这需要事务隔离级别来指定隔离性。</li>
@@ -251,6 +256,7 @@
 <li><p><strong>可重复读（Repeatable Read）</strong>：保证同意事务中先后执行的多次查询将返回同一结果，不受其他事务影响，不可能出现丢失更新，脏读，不可重复读，但可能出现幻读；</p>
 </li>
 <li><p><strong>可串行化（Serializable）</strong>：最高隔离级别，不允许事务并发执行，而必须串行化执行，最安全，不可能出现丢失更新，脏读，不可重复读，幻读；</p>
+<a id="more"></a>
 </li>
 </ul>
 <table>
