@@ -64,7 +64,7 @@
 <link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="git," />
+  <meta name="keywords" content="java," />
 
 
 
@@ -80,22 +80,19 @@
 
 
 
-<meta name="description" content="创建本地仓库 git init --bare shared.git（或者直接git init）
-
-配置个人信息 git config user.name &amp;quot;yourName&amp;quot; git config user.email &amp;quot;your@gmail.com&amp;quot; 或者 git config --global user.name &amp;quot;yourName&amp;quot">
+<meta name="description" content="java代码
+这是刚刚工作时写的一段读取配置文件的代码，回忆满满。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="git常用命令">
-<meta property="og:url" content="http://yoursite.com/2016/05/03/git常用命令/index.html">
+<meta property="og:title" content="刚工作时写的代码片段-java">
+<meta property="og:url" content="http://yoursite.com/2016/05/09/java读取配置文件/index.html">
 <meta property="og:site_name" content="石頭剪刀b">
-<meta property="og:description" content="创建本地仓库 git init --bare shared.git（或者直接git init）
-
-配置个人信息 git config user.name &amp;quot;yourName&amp;quot; git config user.email &amp;quot;your@gmail.com&amp;quot; 或者 git config --global user.name &amp;quot;yourName&amp;quot">
-<meta property="og:updated_time" content="2016-05-03T09:25:07.000Z">
+<meta property="og:description" content="java代码
+这是刚刚工作时写的一段读取配置文件的代码，回忆满满。">
+<meta property="og:updated_time" content="2016-05-09T07:49:31.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="git常用命令">
-<meta name="twitter:description" content="创建本地仓库 git init --bare shared.git（或者直接git init）
-
-配置个人信息 git config user.name &amp;quot;yourName&amp;quot; git config user.email &amp;quot;your@gmail.com&amp;quot; 或者 git config --global user.name &amp;quot;yourName&amp;quot">
+<meta name="twitter:title" content="刚工作时写的代码片段-java">
+<meta name="twitter:description" content="java代码
+这是刚刚工作时写的一段读取配置文件的代码，回忆满满。">
 
 
 
@@ -113,7 +110,7 @@
   };
 </script>
 
-  <title> git常用命令 | 石頭剪刀b </title>
+  <title> 刚工作时写的代码片段-java | 石頭剪刀b </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -312,7 +309,7 @@
             
             
               
-                git常用命令
+                刚工作时写的代码片段-java
               
             
           </h1>
@@ -324,8 +321,8 @@
               <i class="fa fa-calendar-o"></i>
             </span>
             <span class="post-meta-item-text">发表于</span>
-            <time itemprop="dateCreated" datetime="2016-05-03T17:25:07+08:00" content="2016-05-03">
-              2016-05-03
+            <time itemprop="dateCreated" datetime="2016-05-09T15:49:31+08:00" content="2016-05-09">
+              2016-05-09
             </time>
           </span>
 
@@ -338,8 +335,8 @@
               <span class="post-meta-item-text">分类于</span>
               
                 <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/git/" itemprop="url" rel="index">
-                    <span itemprop="name">git</span>
+                  <a href="/categories/java/" itemprop="url" rel="index">
+                    <span itemprop="name">java</span>
                   </a>
                 </span>
 
@@ -354,8 +351,8 @@
             
               <span class="post-comments-count">
                 &nbsp; | &nbsp;
-                <a href="/2016/05/03/git常用命令/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/03/git常用命令/" itemprop="commentsCount"></span>
+                <a href="/2016/05/09/java读取配置文件/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count ds-thread-count" data-thread-key="2016/05/09/java读取配置文件/" itemprop="commentsCount"></span>
                 </a>
               </span>
             
@@ -383,85 +380,9 @@
       
 
       
-        <ol>
-<li><p>创建本地仓库<br> <code>git init --bare shared.git</code>（或者直接<code>git init</code>）</p>
-</li>
-<li><p>配置个人信息<br> <code>git config user.name &quot;yourName&quot;</code><br> <code>git config user.email &quot;your@gmail.com&quot;</code><br> 或者<br> <code>git config --global user.name &quot;yourName&quot;</code><br> <code>git config --global user.email &quot;your@gmail.com&quot;</code></p>
- <a id="more"></a></li>
-<li>复制仓库到本地<br> <code>git clone /f/software/repository/git/shared.git/ .</code>(注意点代表当前目录)<br> 或者<br> <code>git clone git@github.com:challengeof/challengeof.github.io.git</code><br> 或者<br> <code>git clone https://github.com/challengeof/challengeof.github.io.git</code></li>
-<li>未提交<br> <code>git diff readme.txt （diff --&gt; difference）</code><ul>
-<li>【使用时机，修改readme.txt，但还没有准备提交(还未add commit)，想看看此次修改和上次提交的区别】</li>
-</ul>
-</li>
-<li>提交后<br> <code>git diff HEAD -- readme.txt</code><ul>
-<li>命令可以查看工作区和版本库里面最新版本的区别</li>
-</ul>
-</li>
-<li>查看历史<br> <code>git log</code><ul>
-<li>可以查看提交历史，以便确定要回退到哪个版本</li>
-</ul>
-</li>
-<li>重返未来<br> <code>git reflog</code><ul>
-<li>查看命令历史，以便确定要回到未来的哪个版本</li>
-</ul>
-</li>
-<li>撤销操作<br> <code>git checkout -f</code><ul>
-<li>撤销全部<br><code>git checkout -- readme.txt</code></li>
-<li>撤销readme.txt文件，–很重要，不然就切换到另一个分支了，一种是readme.txt自修改后还没有被放到暂存区，<br>现在，撤销修改就回到和版本库一模一样的状态；(还不如再次git pull一次或者 直接vim readme.txt)【改变的是工作区内容】<br>一种是readme.txt已经添加到暂存区后，又在工作区作了修改xx ，现在，撤销修改就回到 刚刚git add到暂存区时的状态，暂存区还在。</li>
-</ul>
-</li>
-<li>创建分支<br> <code>git checkout -b dev</code><ul>
-<li>创建dev分支并切换到该分支。相当于执行了:<br><code>git branch dev</code><br><code>git checkout dev</code></li>
-</ul>
-</li>
-<li>合并和删除分支<br><code>git merge dev</code><ul>
-<li>假设当前分支是master，merge dev,把dev分支合并到当前分支（默认是Fast-forward快进模式 也就是直接把master指向dev的当前提交，所以合并速度非常快。）<br><code>git branch -d dev</code></li>
-<li>删除dev分支，-D 为强制删除。</li>
-</ul>
-</li>
-<li><p>合并分支造成的冲突</p>
-<ul>
-<li>例子:<br>master分支<br><code>git add a.jsp
-git commit a.jsp -m &quot;the content is a&quot;</code><br>dev分支<br><code>git add a.jsp
-git commit a.jsp -m &quot;the content is aaaa&quot;</code><br>合并分支<br><code>git merge dev</code>// 冲突产生，两分支同时修改了一行 , git status查看 冲突的文件<br>修改冲突:<br><code>vim a.jsp
-git add a.jsp
-git commit  -m &quot;conflict fixed&quot; (commit不加文件名哦)</code><br>查看分支合并情况<br><code>git log --graph --pretty=oneline --abbrev-commit</code><br>删除分支 git branch -d dev<br><code>git branch -d dev</code><br>查看分支合并图<br><code>git log --graph</code><br>合并分支 续<br><code>git merge dev(快进模式)
-git merge --no-ff -m &quot;merge with no-ff&quot; dev</code><br>查看分支历史<br><code>git log --graph --pretty=oneline --abbrev-commit</code><br>合并分支时，加上–no-ff<br>参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward<br>合并就看不出来曾经做过合并。</li>
-</ul>
-</li>
-<li><p>标签<br><code>git tag v1.0</code></p>
-<ul>
-<li>标签就是快照，在当前最新commit上打了一个快照，或者针对 某个commit id 打标签。<br><code>git tag v1.0 622222</code>(622222是commit id)。</li>
-<li>查看标签列表<br><code>git tag</code></li>
-<li>查看标签信息<br><code>git show v1.0</code>(git show <tagname>)</tagname></li>
-<li>创建带有说明的标签<br><code>git tag -a v1.0 -m &quot;version1.0的标签&quot; 6222222</code></li>
-<li>操作标签<br><code>git tag -d v1.0</code>删除标签 (因为创建的标签都只存储在本地，不会自动推送到远程。所以，打错的标签可以在本地安全删除。)<br><code>git push origin v1.0 (git push origin &lt;tagname&gt;</code>推送某个标签 到远程仓库。<br><code>git push origin --tags</code> //推送本地所有为推送的 标签到远程<br><code>git tag -d v1.0 
-git push origin :refs/tags/v1.0</code>删除已经推送到远程的标签，注意格式。<br><code>git config --global color.ui true</code> Git显示颜色，会让命令输出看起来更醒目。</li>
-</ul>
-</li>
-<li>推送分支<br><code>git push origin master</code> 指定本地分支 master-&gt;远程master。<br><code>git push origin dev</code> 指定本地分支 dev -&gt;远程 dev<br><code>git checkout -b dev origin/dev</code> 我需要在dev分支上开发，就必须创建远程origin的dev分支到本地</li>
-<li>其他<br><code>git pull</code> 拉去远程分支代码。<br><code>git remote -v</code> 查看远程库信息。<h2 id="注意事项"><a href="#注意事项" class="headerlink" title="注意事项"></a>注意事项</h2></li>
-</ol>
-<ul>
-<li>从本地推送分支，使用<code>git push origin branch-name</code><br>，如果推送失败，先用<code>git pull</code><br>抓取远程的新提交。</li>
-<li>本地新建的分支如果不推送到远程，对其他人就是不可见的。</li>
-<li><code>git pull</code>命令，不能在同一个用户下面git pull得到自己刚刚提交的，会提示当前文件已经是最新的，pull 不下来。</li>
-<li>直接在远程客户端 web上面更新a 文件，在电脑上面就可以<code>git pull</code>得到刚刚更新的代码。</li>
-<li>不同的用户目录(本地仓库如user1，user2)默认都有一个master分支。</li>
-<li><code>git checkout</code><br>其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。</li>
-<li>github 上面 的 pull request用于你fork了别人的项目，然后修改fork后的代码，想提交到 别人的项目里面，就需要点击 pull request。</li>
-<li>研究发现，如APPdemo文件夹下，<code>git init</code> 初始化本地仓库<br><code>git add ,git commit</code>,都是在当前文件夹下面进行的<br>只有<code>git push</code>推送到远程仓库(或者本机其他目录下的仓库中[也算远程仓库，只不过是离线的远程仓库])。前提是需要关联本地仓库与远程仓库<br><code>git clone</code> 命令的时候，默认会做一次关联，如果没有关联的话，需要我们手动关联。</li>
-<li>但是不管远程仓库(net) 远程仓库(本机)，本地仓库(某一个文件夹)本质上都是仓库。</li>
-<li>当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成，master分支是主分支，因此要时刻与远程同步；<br>dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；bug分支只用于在本地修复bug，就没必要推到远程了，<br>除非老板要看看你每周到底修复了几个bug；feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。<br>  标签是为了打上版本号信息，当然不能乱叫，通常用：v1.0, v1.1, v2.0 …或者按发布日期：build-20160503, build-20160504 …<br>  如果你想修复bootstrap的一个bug，或者新增一个功能，立刻就可以开始干活，干完后，往自己的仓库推送。<br>如果你希望bootstrap的官方库能接受你的修改，你就可以在GitHub上发起一个pull request。当然，对方是否接受你的pull request就不一定了。<br>  有些时候，你必须把某些文件放到Git工作目录中，但又不能提交它们，比如保存了数据库密码的配置文件啦，等等，每次git status<br>都会显示Untracked files …，有强迫症的童鞋心里肯定不爽。好在Git考虑到了大家的感受，这个问题解决起来也很简单，<br>  在Git工作区的根目录下创建一个特殊的.gitignore文件，然后把要忽略的文件名填进去，Git就会自动忽略这些文件。不需要从头写.gitignore<br>文件，GitHub已经为我们准备了各种配置文件，只需要组合一下就可以使用了。所有配置文件可以直接在线浏览：<a href="https://github.com/github/gitignore" target="_blank" rel="external">https://github.com/github/gitignore</a><br>如忽略<br>Python编译产生的.pyc<br>、.pyo<br>、dist<br>等文件或目录：<br>//  「#」 是注释  <em>通配符<br>「#」 Python:
-</em>.py[cod]<br><em>.so
-</em>.egg<br>git 工作区 和暂存区 各个分支用的是同一个，仅仅提交的时候由于指针指的地方不同，令我们感觉似乎在不同区间上面工作，<br>且git限定我们 工作区间被修改(如 index.jsp 被修改或被git add但是未 commit) 此时 git是不允许git checkout （切换分支的）<br>注意关联远程仓库和关联远程分支<br><strong>关联远程仓库</strong><br><code>git remote add origin git@github.com:challengeof、challengeof.github.io.git</code><br><strong>关联远程分支</strong><br><code>git branch --set-upstream dev origin/dev</code></li>
-</ul>
-<h2 id="技巧篇"><a href="#技巧篇" class="headerlink" title="技巧篇"></a>技巧篇</h2><ul>
-<li>漂亮的log界面<br>  <code>git config --global alias.lg &quot;log --color --graph --pretty=format:
-  &#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit&quot;</code></li>
-<li>最近一次提交<br>  <code>git config --global alias.last &#39;log -1&#39;</code>//等价 git log -1</li>
-<li>配置文件<br>  配置Git的时候，加上–global是针对当前用户起作用的，如果不加，那只针对当前的仓库起作用。<br>  配置文件放哪了？每个仓库的Git配置文件都放在.git/config文件中<br>  cat .git/config</li>
-<li>难点篇<br>  当你接到一个修复一个bug的任务时,创建一个分支issue-101来修复它，但是当前正在dev上进行的工作只进行到一半,还没法提交，<br>但是此时 必须在两个小时内修复该bug，怎么办？<br>Git还提供了一个stash功能，可以把当前工作现场“储藏”起来，等以后恢复现场后继续工作。<br>  使用<code>git stash</code>就可以将你当前未提交到本地（和服务器）的代码推入到Git的栈中，这时候你的工作区间和上一次提交的内容是完全一样的，<br>所以你可以放心的修 Bug，等到修完Bug，提交到服务器上后，再使用<code>git stash apply</code>将以前一半的工作 应用回来。<br>也许有的人会说，那我可不可以多次将未提交的代码压入到栈中？答案是可以的。当你多次使用’git stash’命令后，你的栈里将充满了未提交的代码，<br>这时候你会对将哪个版本应用回来有些困惑，<code>git stash list</code>命令可以将当前的Git栈信息打印出来，你只需要将找到对应的版本号，<br>  例如使用<code>git stash apply stash@{1}</code>就可以将你指定版本号为stash@{1}的工作取出来，当你将所有的栈都应用回来的时候，<br>可以使用<code>git stash clear</code>来将栈清空。在这里顺便提下<code>git format-patch -n</code>, n是具体某个数字。<br>  例如 <code>git format-patch -1</code> 这时便会根据log生成一个对应的补丁，如果 ‘git format-patch -2’ 那么便会生成2个补丁，当然前提是你的<br>log上有至少有两个记录。<br>  看过上面的信息，就可以知道使用场合了：当前工作区内容已被修改，但是并未完成。这时Boss来了，说前面的分支上面有一个Bug，需要立即修复。<br>可是我又不想提交目前的修改，因为修改没有完成。但是，不提交的话，又没有办法checkout到前面的分支。此时用Git Stash就相当于备份工作区了。<br>然后在Checkout过去修改，就能够达到保存当前工作区，并及时恢复的作用。</li>
+        <h4 id="java代码"><a href="#java代码" class="headerlink" title="java代码"></a>java代码</h4><ul>
+<li>这是刚刚工作时写的一段读取配置文件的代码，回忆满满。<a id="more"></a>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> com.properties.util</span><br><span class="line"><span class="keyword">import</span> java.io.IOException;</span><br><span class="line"><span class="keyword">import</span> java.io.InputStream;</span><br><span class="line"><span class="keyword">import</span> java.util.Properties;</span><br><span class="line"><span class="keyword">import</span> org.apache.log4j.Logger;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Config</span> </span>&#123;</span><br><span class="line">  <span class="keyword">private</span> <span class="keyword">static</span> Logger logger = Logger.getLogger(Config.class);</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Properties <span class="title">getProp</span><span class="params">(String filename)</span></span>&#123;</span><br><span class="line">      Properties prop = <span class="keyword">new</span> Properties();</span><br><span class="line">      InputStream inStream = Config.class.getClassLoader().getResourceAsStream(filename);</span><br><span class="line">      <span class="keyword">try</span> &#123;</span><br><span class="line">        prop.load(inStream);</span><br><span class="line">      &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">        logger.error(<span class="string">"读取Properties文件失败..."</span>,e);</span><br><span class="line">      &#125;<span class="keyword">finally</span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            inStream.close();</span><br><span class="line">        &#125; <span class="keyword">catch</span> (IOException e) &#123;</span><br><span class="line">            e.printStackTrace();</span><br><span class="line">        &#125;</span><br><span class="line">        inStream = <span class="keyword">null</span>;</span><br><span class="line">      &#125;</span><br><span class="line">      <span class="keyword">return</span> prop;</span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">      Properties prop = Config.getProp(<span class="string">"dbconfig.properties"</span>);</span><br><span class="line">      System.out.println(prop.getProperty(<span class="string">"jdbc.user"</span>));</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
 </ul>
 
       
@@ -488,7 +409,7 @@ git push origin :refs/tags/v1.0</code>删除已经推送到远程的标签，注
       
         <div class="post-tags">
           
-            <a href="/tags/git/" rel="tag">#git</a>
+            <a href="/tags/java/" rel="tag">#java</a>
           
         </div>
       
@@ -497,15 +418,15 @@ git push origin :refs/tags/v1.0</code>删除已经推送到远程的标签，注
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2016/05/03/java读取配置文件/" rel="next" title="刚工作时写的代码片段-java">
-                <i class="fa fa-chevron-left"></i> 刚工作时写的代码片段-java
+              <a href="/2016/05/09/随笔/" rel="next" title="随笔">
+                <i class="fa fa-chevron-left"></i> 随笔
               </a>
             
           </div>
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2016/05/04/数据库事务概述/" rel="prev" title="数据库事务概述">
+              <a href="/2016/05/09/数据库事务概述/" rel="prev" title="数据库事务概述">
                 数据库事务概述 <i class="fa fa-chevron-right"></i>
               </a>
             
@@ -522,10 +443,10 @@ git push origin :refs/tags/v1.0</code>删除已经推送到远程的标签，注
 
     <div class="post-spread">
       
-        <div class="ds-share flat" data-thread-key="2016/05/03/git常用命令/"
-     data-title="git常用命令"
+        <div class="ds-share flat" data-thread-key="2016/05/09/java读取配置文件/"
+     data-title="刚工作时写的代码片段-java"
      data-content=""
-     data-url="http://yoursite.com/2016/05/03/git常用命令/">
+     data-url="http://yoursite.com/2016/05/09/java读取配置文件/">
   <div class="ds-share-inline">
     <ul  class="ds-share-icons-16">
 
@@ -552,8 +473,8 @@ git push origin :refs/tags/v1.0</code>删除已经推送到远程的标签，注
           
   <div class="comments" id="comments">
     
-      <div class="ds-thread" data-thread-key="2016/05/03/git常用命令/"
-           data-title="git常用命令" data-url="http://yoursite.com/2016/05/03/git常用命令/">
+      <div class="ds-thread" data-thread-key="2016/05/09/java读取配置文件/"
+           data-title="刚工作时写的代码片段-java" data-url="http://yoursite.com/2016/05/09/java读取配置文件/">
       </div>
     
   </div>
@@ -691,7 +612,7 @@ git push origin :refs/tags/v1.0</code>删除已经推送到远程的标签，注
               
             
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#注意事项"><span class="nav-number">1.</span> <span class="nav-text">注意事项</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#技巧篇"><span class="nav-number">2.</span> <span class="nav-text">技巧篇</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#java代码"><span class="nav-number">1.</span> <span class="nav-text">java代码</span></a></li></ol></div>
             
           </div>
         </section>
